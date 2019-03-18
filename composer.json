@@ -1,0 +1,15 @@
+{
+    "name": "nikteg/food-php",
+    "authors": [
+        {
+            "name": "Niklas",
+            "email": "me@sodapop.se"
+        }
+    ],
+    "require": {
+        "lodash-php/lodash-php": "^0.0.5",
+        "krak/fn": "^0.1.30",
+        "paquettg/php-html-parser": "^2.0",
+        "nesbot/carbon": "^2.16"
+    }
+}
