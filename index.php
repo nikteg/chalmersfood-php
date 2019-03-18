@@ -68,28 +68,28 @@ $restaurants = [
     "fetcher" => function () {
       return json_decode(file_get_contents(carboncloudAppendDates(carboncloudURL("21f31565-5c2b-4b47-d2a1-08d558129279"))));
     },
-    "mapper" => carboncloudMapper,
+    "mapper" => function ($items) { return carboncloudMapper($items); },
   ],
   [
     "name" => "Linsen",
     "fetcher" => function () {
       return json_decode(file_get_contents(carboncloudAppendDates(carboncloudURL("b672efaf-032a-4bb8-d2a5-08d558129279"))));
     },
-    "mapper" => carboncloudMapper,
+    "mapper" => function ($items) { return carboncloudMapper($items); },
   ],
   [
     "name" => "Express",
     "fetcher" => function () {
       return json_decode(file_get_contents(carboncloudAppendDates(carboncloudURL("3d519481-1667-4cad-d2a3-08d558129279"))));
     },
-    "mapper" => carboncloudMapper,
+    "mapper" => function ($items) { return carboncloudMapper($items); },
   ],
   [
     "name" => "S.M.A.K.",
     "fetcher" => function () {
       return json_decode(file_get_contents(carboncloudAppendDates(carboncloudURL("3ac68e11-bcee-425e-d2a8-08d558129279"))));
     },
-    "mapper" => carboncloudMapper,
+    "mapper" => function ($items) { return carboncloudMapper($items); },
   ],
   [
     "name" => "Einstein",
