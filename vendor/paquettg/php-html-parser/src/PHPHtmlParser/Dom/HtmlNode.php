@@ -183,7 +183,7 @@ class HtmlNode extends InnerNode
      * Call this when something in the node tree has changed. Like a child has been added
      * or a parent has been changed.
      */
-    protected function clear(): void
+    protected function clear()
     {
         $this->innerHtml = null;
         $this->outerHtml = null;

@@ -106,7 +106,7 @@ final class StaticDom
     /**
      * Sets the $dom variable to null.
      */
-    public static function unload(): void
+    public static function unload()
     {
         self::$dom = null;
     }

@@ -102,7 +102,7 @@ class Collection implements IteratorAggregate, ArrayAccess, Countable
      * @param mixed $offset
      * @param mixed $value
      */
-    public function offsetSet($offset, $value): void
+    public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
             $this->collection[] = $value;
@@ -127,7 +127,7 @@ class Collection implements IteratorAggregate, ArrayAccess, Countable
      *
      * @param mixed $offset
      */
-    public function offsetUnset($offset): void
+    public function offsetUnset($offset)
     {
         unset($this->collection[$offset]);
     }

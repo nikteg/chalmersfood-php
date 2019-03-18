@@ -461,7 +461,7 @@ class Dom
      *
      * @throws NotLoadedException
      */
-    protected function isLoaded(): void
+    protected function isLoaded()
     {
         if (is_null($this->content)) {
             throw new NotLoadedException('Content is not loaded!');
@@ -527,7 +527,7 @@ class Dom
     /**
      * Attempts to parse the html in content.
      */
-    protected function parse(): void
+    protected function parse()
     {
         // add the root node
         $this->root = new HtmlNode('root');

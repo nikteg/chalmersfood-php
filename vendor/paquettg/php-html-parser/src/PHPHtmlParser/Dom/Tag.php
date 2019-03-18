@@ -137,7 +137,7 @@ class Tag
      * @param Encode $encode
      * @return void
      */
-    public function setEncoding(Encode $encode): void
+    public function setEncoding(Encode $encode)
     {
         $this->encode = $encode;
     }
@@ -184,7 +184,7 @@ class Tag
      * @param mixed $attr_key
      * @param mixed $attr_value
      */
-    public function setStyleAttributeValue($attr_key, $attr_value): void
+    public function setStyleAttributeValue($attr_key, $attr_value)
     {
 
         $style_array = $this->getStyleAttributeArray();

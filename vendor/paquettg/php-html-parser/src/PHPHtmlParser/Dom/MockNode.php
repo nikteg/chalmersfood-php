@@ -38,7 +38,7 @@ class MockNode extends InnerNode
     /**
      * Clear content of this node
      */
-    protected function clear(): void
+    protected function clear()
     {
         $this->innerHtml = null;
         $this->outerHtml = null;

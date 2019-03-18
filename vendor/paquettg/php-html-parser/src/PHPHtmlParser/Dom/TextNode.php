@@ -81,7 +81,7 @@ class TextNode extends LeafNode
      * @var string $text
      * @return void
      */
-    public function setText(string $text): void
+    public function setText(string $text)
     {
         $this->text = $text;
 
@@ -119,7 +119,7 @@ class TextNode extends LeafNode
      * Call this when something in the node tree has changed. Like a child has been added
      * or a parent has been changed.
      */
-    protected function clear(): void
+    protected function clear()
     {
         $this->convertedText = null;
     }

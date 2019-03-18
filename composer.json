@@ -1,14 +1,23 @@
 {
-    "name": "nikteg/food-php",
-    "authors": [
-        {
-            "name": "Niklas",
-            "email": "me@sodapop.se"
-        }
-    ],
-    "require": {
-        "krak/fn": "^0.1.30",
-        "paquettg/php-html-parser": "^2.0",
-        "nesbot/carbon": "^2.16"
+  "name": "nikteg/food-php",
+  "authors": [
+    {
+      "name": "Niklas",
+      "email": "me@sodapop.se"
     }
+  ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/nikteg/fn"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/nikteg/php-html-parser"
+    }
+  ],
+  "require": {
+    "krak/fn": "dev-master",
+    "paquettg/php-html-parser": "dev-master"
+  }
 }

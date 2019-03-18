@@ -380,7 +380,7 @@ abstract class AbstractNode
      * @param string $key
      * @return void
      */
-    public function removeAttribute(string $key): void
+    public function removeAttribute(string $key)
     {
         $this->tag->removeAttribute($key);
 
@@ -394,7 +394,7 @@ abstract class AbstractNode
      *
      * @return void
      */
-    public function removeAllAttributes(): void
+    public function removeAllAttributes()
     {
         $this->tag->removeAllAttributes();
 
@@ -490,7 +490,7 @@ abstract class AbstractNode
      *
      * @return void
      */
-    abstract protected function clear(): void;
+    abstract protected function clear();
 
     /**
      * Check is node type textNode

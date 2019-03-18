@@ -52,7 +52,7 @@ function carboncloudMapper($items)
   ksort($grouped);
 
   $weekWithNames = map(function ($week) {
-    $names = toArray(map(carboncloudRecipeCategory, $week));
+    $names = toArray(map(function ($item) { return carboncloudRecipeCategory($item); }, $week));
 
     sort($names);
 
@@ -207,6 +207,20 @@ function menuItemClasses(int $index, int $selectedDay, int $today)
   return join(" ", $classes);
 }
 
+function updatedAgo(int $timestamp) {
+  $diff = time() - $timestamp;
+
+  $minutes = floor($diff / 60);
+
+  if ($minutes > 0) {
+    return $minutes > 1 || $minutes === 0 ? "${minutes} minuter" : "${minutes} minut";
+  }
+
+  $seconds = $diff;
+
+  return $seconds > 1 || $seconds === 0 ? "${seconds} sekunder" : "${seconds} sekund";
+}
+
 $cachePath = __DIR__ . "/cache";
 
 if (isset($_GET["refresh"])) {
@@ -270,7 +284,7 @@ $selectedDay = min(4, max(0, $selectedDay));
         </ul>
     </div>
     <footer>
-        <div>Uppdaterad <?php echo Carbon::createFromTimestamp($cache->timestamp)->locale('sv')->diffForHumans() ?>...</div>
+        <div>Uppdaterad för <?php echo updatedAgo($cache->timestamp) ?> sedan...</div>
         <div><a href="/?refresh">Tvinga omladdning av menyer</a>&nbsp;|&nbsp;<a href="https://github.com/nikteg/chalmersfood-php">Källkod</a></div>
     </footer>
 </body>

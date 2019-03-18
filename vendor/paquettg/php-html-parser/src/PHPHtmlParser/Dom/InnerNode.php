@@ -27,7 +27,7 @@ abstract class InnerNode extends ArrayNode
      * @param Encode $encode
      * @return void
      */
-    public function propagateEncoding(Encode $encode): void
+    public function propagateEncoding(Encode $encode)
     {
         $this->encode = $encode;
         $this->tag->setEncoding($encode);
@@ -318,7 +318,7 @@ abstract class InnerNode extends ArrayNode
      * @throws ChildNotFoundException
      * @return void
      */
-    public function replaceChild(int $childId, AbstractNode $newChild): void
+    public function replaceChild(int $childId, AbstractNode $newChild)
     {
         $oldChild = $this->children[$childId];
 
