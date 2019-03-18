@@ -271,7 +271,7 @@ $selectedDay = min(4, max(0, $selectedDay));
     </div>
     <footer>
         <div>Uppdaterad <?php echo Carbon::createFromTimestamp($cache->timestamp)->locale('sv')->diffForHumans() ?>...</div>
-        <div><a href="/?refresh">Tvinga omladdning av menyer</a>&nbsp;|&nbsp;<a href="https://github.com/nikteg/food-php">Källkod</a></div>
+        <div><a href="/?refresh">Tvinga omladdning av menyer</a>&nbsp;|&nbsp;<a href="https://github.com/nikteg/chalmersfood-php">Källkod</a></div>
     </footer>
 </body>
 
